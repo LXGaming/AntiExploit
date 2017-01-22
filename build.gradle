@@ -41,3 +41,13 @@ jar {
     ["LICENSE"]
   }
 }
+
+processResources {
+  inputs.property "archivesBaseName", project.archivesBaseName
+  inputs.property "version", project.version
+  
+  from (sourceSets.main.resources.srcDirs) {
+    include "plugin.yml"
+    expand "name":project.archivesBaseName, "version":project.version
+  }
+}
