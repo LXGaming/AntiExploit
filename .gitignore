@@ -50,6 +50,8 @@ Temporary Items
 .settings
 .classpath
 .project
+client.launch
+server.launch
 
 # Maven project
 target
